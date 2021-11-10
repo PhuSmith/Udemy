@@ -1,0 +1,72 @@
+.cover {
+    background-image: url(../img/cover.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    &-content {
+        max-width: 460px;
+    }
+    &-heading {
+        @include styleText(38px, $color-white-0, $fw-bold);
+        margin-bottom: 10px;
+    }
+    &-text {
+        @include styleText($fs-2 - 2, $color-white-0, $fw-normal);
+        margin-bottom: 20px;
+        line-height: 1.61;
+    }
+    .form-control {
+        height: 50px;
+        padding: $pd-2;
+        border: none;
+        font-size: 20px;
+        border-bottom-left-radius: $border-radius;
+        border-top-left-radius: $border-radius;
+        &::placeholder {
+            @include styleText($fs-2, $color-gray-2, $fw-normal);
+        }
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    .input-group-append {
+        .input-group-text {
+            font-size: 20px;
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: $color-white-0;
+            color: $color-red-0;
+            border: none;
+            padding: 11px 14px;
+        }
+        &:hover {
+            .input-group-text {
+                background-color: $color-red-0;
+                color: $color-white-0;
+            }
+        }
+    }
+    @include responsive("large") {
+        &-content {
+            max-width: 350px;
+        }
+    }
+    @include responsive("small") {
+        &-heading {
+            font-size: 24px;
+            font-weight: 500;
+            width: 60%;
+        }
+        &-text {
+            font-size: 18px;
+            width: 60%;
+        }
+        .form-control::placeholder {
+            font-size: 16px;
+        }
+    }
+}

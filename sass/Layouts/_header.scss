@@ -1,0 +1,157 @@
+.header {
+    width: 100%;
+    background-color: $color-white-0;
+    @include styleText($fs-1, $color-black-light, $fw-normal);
+    &-line {
+        height: 8px;
+        background: linear-gradient(
+            90deg,
+            rgb(100, 91, 83) 0%,
+            rgb(235, 82, 82) 18.23%,
+            rgb(247, 143, 47) 34.37%,
+            rgb(244, 193, 81) 48.96%,
+            rgb(82, 187, 118) 66.15%,
+            rgb(38, 165, 215) 82.29%,
+            rgb(224, 105, 183) 100%
+        );
+    }
+    .navbar {
+        padding: 0 5px;
+        height: 65px;
+    }
+    &-left {
+        display: flex;
+        align-items: center;
+        .navbar-brand {
+            margin-right: 16px;
+            img {
+                width: 110px;
+            }
+        }
+        .header-categories {
+            padding: 10px 0;
+            i {
+                color: #8a92a3;
+            }
+            a {
+                white-space: nowrap;
+                max-width: 170px;
+                display: block;
+                padding: 12px 15px;
+                @include styleText($fs-1, $color-black-light, $fw-normal);
+                &:hover {
+                    background-color: $color-gray-1;
+                    border-radius: 2px;
+                    text-decoration: none;
+                }
+            }
+        }
+        .header-form {
+            margin: 0 25px;
+            width: 100%;
+            .form-control {
+                height: 44px;
+                padding: 10px 12px;
+                background-color: $color-gray-1;
+                border: none;
+                transition: none;
+                &::-webkit-input-placeholder {
+                    font-size: 13px;
+                    line-height: 1.3;
+                }
+                &::-moz-input-placeholder {
+                    font-size: 13px;
+                    line-height: 1.3;
+                }
+                &:focus {
+                    box-shadow: none;
+                    background-color: $color-white-0;
+                    border-top: 1px solid $color-gray-6;
+                    border-bottom: 1px solid $color-gray-6;
+                    border-left: 1px solid $color-gray-6;
+                }
+                &:focus + .input-group-append {
+                    .input-group-text {
+                        background-color: $color-white-0;
+                        border-top: 1px solid $color-gray-6;
+                        border-bottom: 1px solid $color-gray-6;
+                        border-right: 1px solid $color-gray-6;
+                    }
+                    &:hover {
+                        .input-group-text {
+                            color: $color-white-0;
+                            background-color: $color-red-0;
+                        }
+                    }
+                }
+            }
+            .input-group-append {
+                .input-group-text {
+                    background-color: $color-gray-1;
+                    color: $color-red-0;
+                    border: none;
+                }
+                &:hover {
+                    .input-group-text {
+                        color: $color-white-0;
+                        background-color: $color-red-0;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    &-right {
+        .navbar-nav {
+            align-items: center;
+            justify-content: space-between;
+            .nav-item {
+                .nav-link {
+                    @include styleText($fs-1, $color-black-light, $fw-normal);
+                    padding: $pd-1;
+                }
+                &:hover {
+                    background-color: $color-gray-1;
+                }
+            }
+            .nav-item:nth-child(3) {
+                .nav-link {
+                    font-size: $fs-2 + 2px;
+                    display: flex;
+                }
+                border-radius: 50%;
+            }
+        }
+    }
+    @include responsive("extra-large") {
+        &-right {
+            .business,
+            .teach {
+                display: none;
+            }
+        }
+    }
+    @include responsive("medium") {
+        &-left {
+            justify-content: center;
+        }
+        &-categories,
+        &-form {
+            display: none;
+        }
+        &-right {
+            .btnGroup {
+                display: none;
+            }
+        }
+        &-search {
+            display: flex;
+            align-items: center;
+        }
+        &-icon {
+            font-size: 20px;
+            color: $color-gray-4;
+        }
+    }
+}

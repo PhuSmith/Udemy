@@ -1,0 +1,17 @@
+.student {
+    margin-bottom: 24px;
+    &-heading {
+        font-size: 19px;
+        color: rgb(80, 87, 99);
+        margin-bottom: 10px;
+    }
+    &-list {
+        margin-bottom: 24px;
+        .card {
+            margin-right: 15px;
+        }
+        .slick-list {
+            padding: 2px 4px 8px;
+        }
+    }
+}

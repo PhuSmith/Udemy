@@ -1,0 +1,64 @@
+.banner {
+    margin-bottom: 32px;
+    &-border {
+        height: 8px;
+        background: linear-gradient(-45deg, rgb(236, 82, 82) 0%, rgb(110, 26, 82) 100%);
+    }
+    &-container {
+        display: flex;
+        align-items: center;
+        background-color: rgb(41, 48, 59);
+        color: $color-gray-5;
+        text-align: center;
+        height: 360px;
+    }
+    &-content {
+        width: 100%;
+        i {
+            font-size: 32px;
+        }
+    }
+    &-heading {
+        margin-bottom: 16px;
+    }
+    &-desc {
+        margin-bottom: 24px;
+    }
+    &-top,
+    &-bottom {
+        display: flex;
+        margin-bottom: 32px;
+        margin-top: 48px;
+        visibility: visible;
+    }
+    &-top {
+        i {
+            flex: 1;
+        }
+    }
+    &-between {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-left {
+            visibility: visible;
+            padding-left: 64px;
+        }
+        &-right {
+            visibility: visible;
+            padding-right: 64px;
+        }
+    }
+    @include responsive("large") {
+        &-top,
+        &-bottom {
+            visibility: hidden;
+        }
+        .between {
+            &-left,
+            &-right {
+                visibility: hidden;
+            }
+        }
+    }
+}

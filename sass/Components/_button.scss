@@ -1,0 +1,31 @@
+.btn-red{
+    @include styleButton($color-red-0,$color-red-0,$pd-1 + 1,$pd-1 + 2);
+    @include styleText($fs-0,$color-white-0,$fw-bold-1);
+    &:hover{
+        @include styleHoverButton($color-red-2,$color-red-2,$color-white-0);
+    }
+}
+.btn-white{
+    @include styleButton($color-white-0,$color-gray-4,$pd-1 + 1,$pd-1 + 2);
+    @include styleText($fs-0,$color-gray-4,$fw-bold-1);
+    &:hover{
+        @include styleHoverButton($color-white-0,$color-black-0,$color-black-0);
+    }
+}
+//max-width:768px
+@include responsive("large") {
+    .btn-red {
+        @include styleButton($color-red-0, $color-red-0, ($pd-1)-3, ($pd-1)-3);
+    }
+    .btn-white {
+        @include styleButton($color-white-cream, $color-black-light, ($pd-1)-3, ($pd-1)-3);
+    }
+}
+
+.btn-red-white {
+    @include styleButton($color-white-0, $color-white-0, $pd-1+1, $pd-1+2);
+    @include styleText($fs-0, $color-red-0, $fw-bold-1);
+    &:hover {
+        @include styleHoverButton($color-red-0, $color-red-0, $color-white-0);
+    }
+}

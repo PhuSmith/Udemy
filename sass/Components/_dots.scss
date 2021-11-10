@@ -1,0 +1,23 @@
+.slick-dots {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0 5px;
+  button {
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 100rem;
+    background-color: #dedfe0;
+    border: none;
+    outline: none;
+    transition: all 0.2s linear;
+  }
+  .slick-active button {
+    background-color: #686f7a;
+  }
+}

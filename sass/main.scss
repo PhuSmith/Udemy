@@ -1,0 +1,34 @@
+//Helper
+@import "./Helper/variables";
+@import "./Helper/mixin";
+
+//Vendor
+@import "./Vendor/slick/slick";
+// @import "./Vendor/slick/slick-theme";
+
+//Base
+@import "./Base/reset";
+@import "./Base/base";
+
+//Components
+@import "./Components/button";
+@import "./Components/arrow";
+@import "./Components/cards";
+@import "./Components/dots";
+
+//Layout
+@import "./Layouts/header";
+@import "./Layouts/cover";
+@import "./Layouts/intro";
+@import "./Layouts/courses";
+@import "./Layouts/services";
+@import "./Layouts/students";
+@import "./Layouts/banner";
+@import "./Layouts/categories";
+@import "./Layouts/feedback";
+@import "./Layouts/company";
+@import "./Layouts/footer";
+
+//Page
+
+// Theme
